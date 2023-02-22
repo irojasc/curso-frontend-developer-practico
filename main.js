@@ -3,7 +3,7 @@ const menu_container = document.querySelector(".desktop-menu")
 const hamburguer_menu = document.querySelector(".menu");
 const mobile_menu = document.querySelector(".mobile-menu");
 const carrito_icon = document.querySelector(".shopping-cart-icon");
-const menu_shopping_cart = document.querySelector(".product-detail");
+const shoppingCartContainer = document.querySelector("#shoppingCartContainer");
 const cardsContainer = document.querySelector(".cards-container");
 
 nav_email.addEventListener('click', toggleMenu);
@@ -17,13 +17,13 @@ function toggleMenu(event) {
 
     else if(event.target.className == "menu"){
         mobile_menu.classList.toggle('inactive');
-        if (!(menu_shopping_cart.classList.contains('inactive'))){
-                menu_shopping_cart.classList.add('inactive');
+        if (!(shoppingCartContainer.classList.contains('inactive'))){
+                shoppingCartContainer.classList.add('inactive');
                 }
             }
             
     else if(event.target.className == "shopping-cart-icon"){
-        menu_shopping_cart.classList.toggle('inactive');
+        shoppingCartContainer.classList.toggle('inactive');
         if (!(mobile_menu.classList.contains('inactive'))){
             mobile_menu.classList.add('inactive');
             }
